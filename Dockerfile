@@ -17,3 +17,4 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="MRTG" \
       org.label-schema.description="Multi Router Traffic Grapher." \
       org.label-schema.schema-version="1.0" \
+      org.label-schema.arch="arm7" \
