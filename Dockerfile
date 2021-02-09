@@ -3,8 +3,8 @@ FROM arm32v7/alpine:3.13
 ENV TZ "UTC"
 ENV HOSTS "public:localhost"
 
-RUN apk add --update \
-    && apk install --no-cache tzdata net-snmp-tools mrtg dcron nginx \
+RUN apk update \
+    && apk add --no-cache tzdata net-snmp-tools mrtg dcron nginx \
     && mkdir -p /etc/mrtg/conf.d
 
 ADD config/mrtg.sh /mrtg/mrtg.sh
