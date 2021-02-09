@@ -33,3 +33,5 @@ jobs:
                 --output "type=image,push=true" \
                 --file ./Dockerfile . \
                 --tag "vibin/mrtg:latest"
+
+                docker run -d -p 8081:80 -e "HOSTS='public:localhost,community:ipaddress'" -v `pwd`/html:/usr/share/nginx/html -v `pwd`/conf.d:/etc/mrtg/conf.d vibin/mrtg
