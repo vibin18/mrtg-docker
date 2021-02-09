@@ -12,7 +12,7 @@ ADD config/mrtg.cron /etc/crontabs/root
 ADD config/nginx.conf /etc/nginx/nginx.conf
 ADD config/mrtg.cfg /etc/mrtg/mrtg.cfg
 RUN chmod 755 /mrtg/mrtg.sh
-CMD ["/usr/sbin/mrtg.sh"]
+CMD ["/mrtg/mrtg.sh"]
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.name="MRTG" \
