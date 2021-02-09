@@ -1,4 +1,4 @@
-name: '[builder] CI for releases'
+name: '[builder] CI for mrtg-docker'
 
 on:
     push:
@@ -32,4 +32,4 @@ jobs:
                 --platform=linux/arm/v7 \
                 --output "type=image,push=true" \
                 --file ./Dockerfile . \
-                --tag $(echo "${DOCKER_USERNAME}" | tr '[:upper:]' '[:lower:]')/mrtg:latest
+                --tag $(echo "vibin/mrtg:latest
