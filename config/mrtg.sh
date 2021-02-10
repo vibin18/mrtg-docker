@@ -16,7 +16,7 @@ if [ -n "${HOSTS}" ]; then
         if [ -z "${NAME}" ]; then
             NAME="${HOST}"
         fi
-        [[ ! -f "${MRTGDIR}/conf.d/${NAME}.cfg" ]] && /usr/bin/cfgmaker --ifref=name --output=${MRTGDIR}/conf.d/${NAME}.cfg "${COMMUNITY}@${HOST}"
+        [[ ! -f "${MRTGDIR}/conf.d/${NAME}.cfg" ]] && /usr/bin/cfgmaker --zero-speed=100000000 --ifref=name --output=${MRTGDIR}/conf.d/${NAME}.cfg "${COMMUNITY}@${HOST}"
     done
 else
     COMMUNITY=${1:-"public"}
@@ -25,7 +25,7 @@ else
     if [ -z "${NAME}" ]; then
         NAME="${HOST}"
     fi
-    [[ ! -f "${MRTGDIR}/conf.d/${NAME}.cfg" ]] && /usr/bin/cfgmaker --ifref=name --output=${MRTGDIR}/conf.d/${NAME}.cfg "${COMMUNITY}@${HOST}"
+    [[ ! -f "${MRTGDIR}/conf.d/${NAME}.cfg" ]] && /usr/bin/cfgmaker --zero-speed=100000000 --ifref=name --output=${MRTGDIR}/conf.d/${NAME}.cfg "${COMMUNITY}@${HOST}"
 fi
 
 env LANG=C /usr/bin/mrtg ${MRTGCFG}
