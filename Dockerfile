@@ -19,6 +19,3 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.description="Multi Router Traffic Grapher." \
       org.label-schema.schema-version="1.0" \
       org.label-schema.arch="arm7" \
-
-
-      SNMPWALK Problem for 1.3.6.1.2.1.1 on 'public@192.168.68.100::::::v4only
